@@ -1,4 +1,4 @@
-import { SEND_SAVE_NAME } from "../actions";
+import { SAVE_NAME } from "../actions";
 
 const INITIAL_STATE = {
   name: "",
@@ -6,10 +6,10 @@ const INITIAL_STATE = {
 
 const homeReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case SEND_SAVE_NAME:
+    case SAVE_NAME:
       return {
         ...state,
-        name: action.name,
+        name: action.payload.name
       };
     default:
       return state;
