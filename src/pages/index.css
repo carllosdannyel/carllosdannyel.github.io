@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #282c34;
+}
+
+.wellcome-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.wellcome-description {
+  font-size: 24px;
+  color: white;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.wellcome-form {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.wellcome-form > form > label > input {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin: 0 10px;
+}
+
+#input-button {
+  cursor: pointer;
+}
