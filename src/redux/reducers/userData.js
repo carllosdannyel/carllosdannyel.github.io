@@ -4,7 +4,7 @@ const INITIAL_STATE = {
   name: "",
 };
 
-const homeReducer = (state = INITIAL_STATE, action) => {
+const userData = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case SAVE_NAME:
       return {
@@ -16,4 +16,4 @@ const homeReducer = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default homeReducer;
+export default userData;

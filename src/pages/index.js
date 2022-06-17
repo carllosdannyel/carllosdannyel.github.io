@@ -14,7 +14,6 @@ class Index extends Component {
   };
 
   handleClick = () => {
-    // const { name } = this.state;
     const { dispatch, history } = this.props;
     dispatch(sendNameData(this.state));
     history.push('/home')
