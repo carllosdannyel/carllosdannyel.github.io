@@ -1,6 +1,6 @@
-export const SEND_SAVE_NAME = "SEND_SAVE_NAME";
+export const SAVE_NAME = "SAVE_NAME";
 
 export const sendNameData = (nameData) => ({
-  type: SEND_SAVE_NAME,
+  type: SAVE_NAME,
   payload: { ...nameData },
 });

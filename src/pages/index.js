@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { sendNameData } from "../redux/actions";
 import "./index.css";
 
-export default class Home extends Component {
+class Index extends Component {
   state = {
     name: "",
   };
@@ -11,10 +13,16 @@ export default class Home extends Component {
     this.setState({ [name]: value });
   };
 
-  handleClick = () => {};
+  handleClick = () => {
+    // const { name } = this.state;
+    const { dispatch, history } = this.props;
+    dispatch(sendNameData(this.state));
+    history.push('/home')
+  };
 
   render() {
     const { name } = this.state;
+    console.log(this.props);
     return (
       <div className="wellcome-container">
         <div className="wellcome-description">
@@ -34,7 +42,12 @@ export default class Home extends Component {
               />
             </label>
             <label htmlFor="input-button">
-              <input id="input-button" type="button" value="ENTRAR" />
+              <input
+                id="input-button"
+                type="button"
+                value="ENTRAR"
+                onClick={this.handleClick}
+              />
             </label>
           </form>
         </div>
@@ -42,3 +55,5 @@ export default class Home extends Component {
     );
   }
 }
+
+export default connect()(Index);
