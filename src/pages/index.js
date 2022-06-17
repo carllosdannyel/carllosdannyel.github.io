@@ -21,7 +21,6 @@ class Index extends Component {
 
   render() {
     const { name } = this.state;
-    console.log(this.props);
     return (
       <div className="wellcome-container">
         <div className="wellcome-description">
