@@ -13,10 +13,13 @@ class Index extends Component {
     this.setState({ [name]: value });
   };
 
-  handleClick = () => {
+  handleClick = (event) => {
+    event.preventDefault();
+    const { name } = this.state;
     const { dispatch, history } = this.props;
+    localStorage.setItem("user", JSON.stringify([{ name: name }]));
     dispatch(sendNameData(this.state));
-    history.push('/home')
+    history.push("home");
   };
 
   render() {
@@ -28,7 +31,7 @@ class Index extends Component {
           <h1>PORTFOLIO</h1>
         </div>
         <div className="wellcome-form">
-          <form>
+          <form onSubmit={this.handleClick}>
             <label htmlFor="input-name">
               <input
                 name="name"
