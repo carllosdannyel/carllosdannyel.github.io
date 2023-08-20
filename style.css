@@ -1,0 +1,32 @@
+body {
+  background-color: rgb(111, 228, 164);
+}
+
+.meuNome,
+.descricao {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+em {
+  color: rgb(67, 138, 83);
+}
+
+.javascript {
+  font-size: 20px;
+}
+
+.sql {
+  font-size: 18px;
+}
+
+.react {
+  font-size: 16px;
+}
+
+.bootstrap {
+  font-size: 14px;
+}
+
+.metoAgil {
+  font-size: 12px;
+}
